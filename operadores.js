@@ -8,12 +8,10 @@ console.log(9 - 3);
 console.log(2 * 12);
 
 //división
-console.log(90 / 9); // bien escrito
-console.log(9 / 90); // mal escrito
+console.log(90 / 9); // siempre se pone el num mas grande primero
 
 //módulo o resto
-console.log(80 % 60);
-console.log(60 % 80); // mal escrito
+console.log(80 % 60); // num + grande primero
 
 //precedencia
 console.log((3 + 5) * 2 - 8);

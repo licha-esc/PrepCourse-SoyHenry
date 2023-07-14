@@ -1,9 +1,11 @@
-/* console.log(4 < 7);
+console.log(4 < 7);
 console.log(4 < 1);
 console.log(4 > 4);
-console.log(4 == 7); */
+console.log(4 == 7);
 
-// Operador de asignacion: "="
+var num = 4;
+
+// Operador de asignacion: "=" 
 
 // Operador de igualdad débil "==": Compara dos valores para ver si son iguales, realizando una conversión de tipo si es necesario. Esto significa que puede comparar valores de diferentes tipos y tratará de convertirlos antes de hacer la comparación.
 
@@ -12,7 +14,15 @@ console.log(4 == 7); */
 // 3 es un dato de tipo number
 // "3" es un dato de tipo string
 
-console.log(3 == 3);
+/* console.log(3 == 3);
 console.log(3 === 3);
 console.log(3 == '3');
-console.log(3 === '3'); // false xq el de la izq es number y el de la derecha string
+console.log(3 === '3'); */ // false xq el de la izq es number y el de la derecha string
+
+
+//Asociatividad: En JS, el operador de asignación (=) se evalúa de derecha a izquierda. 
+
+var a = 1;
+var b = 2;
+var c = a = b;
+console.log(c);
