@@ -35,7 +35,7 @@ saludar();
  Es una alternativa compacta a la expresión de función tradicional, pero es limitada y no se puede utilizar en todas las situaciones.
   
  Características:
-1º es una función anónima, para declararla necesito almacenarla en una variable para poder llamarla después.
+1º es una función anónima y para declararla necesito almacenarla en una variable para poder llamarla después.
 2º ya no necesita la palabra reservada function.
 3º después de los paréntesis colocamos una “flecha”. En caso de que haya un sólo parámetro podemos sacar los paréntesis. Cuando la función no tiene parámetros los paréntesis serán obligatorios.
 4º a continuación de la flecha el uso de llaves es OPCIONAL (solo si hay más de una línea se usa). En caso de NO usarlas la flecha será un RETURN incluido para lo que esté inmediatamente después en la misma línea. */

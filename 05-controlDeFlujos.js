@@ -103,13 +103,13 @@ switch (semaforo) {
 }
 
 
-// Operador Ternario:
-// nos sirve para escribir el código de una sentencia if de una forma más sencilla:
-// condición ? expr1 : expr2;
+/* Operador Ternario:
+nos sirve para escribir el código de una sentencia if de una forma más sencilla:
+condición ? expr1 : expr2;
 
-// condición > es una expresión que se evalúa como true o false.
-// expr1 > si la condición es true retorna este valor.
-// expr2 > si la condición es false.
+condición > es una expresión que se evalúa como true o false.
+expr1 > si la condición es true retorna este valor.
+expr2 > si la condición es false. */
 
 var edad = 18;
 var mensaje = (edad >= 18) ? "Eres mayor de edad" : "Eres menor de edad";
