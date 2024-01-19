@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+</head>
+
+<body>
+    <header>
+        <h1>Este es un formulario de contacto</h1>
+    </header>
+    <main>
+        <div>
+            <h2>Este es un formulario para que puedas contactarnos</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit eveniet officiis eum asperiores neque.
+                Incidunt cupiditate nihil, veritatis assumenda tenetur numquam ea. Praesentium quidem quam a quasi
+                cupiditate eum! Voluptates.
+            </p>
+        </div>
+
+        <form action="">
+
+            <div>
+                <!-- <label for="nombre">Nombre: </label> -->
+                <input type="text" name="nombre" placeholder="Nombre"><!-- la etiqueta input no necesariamente va a ser de tipo texto, al escribir type te da las opciones-->
+            </div>
+
+            <div>
+                <label for="apellido">Apellido: </label> <!-- es muy importante que en el atributo for vaya el mismo nombre que el atributo name-->
+                <input type="text" name="apellido"> <!-- es vital que los inputs tengan un name -->
+            </div>
+
+            <div>
+                <label for="edad">Edad: </label>
+                <input type="number" name="edad">
+            </div>
+
+            <div>
+                <label for="password">Contraseña: </label>
+                <input type="password" name="password">
+            </div>
+
+            <button>ENVIAR</button> <!-- el botón envía por defecto la información porque está adentro de un form, si estaba suelto no tendría lógica -->
+
+        </form>
+
+    </main>
+</body>
+
+</html>
