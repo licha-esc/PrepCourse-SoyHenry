@@ -1,10 +1,20 @@
 .noticia {
     width: 450px;
+    border: 2px solid black;
+    width: fit-content;
+    /* ajusta el ancho al ancho del contenido */
+    padding: 1em 1em 1em 1em;
+    border-radius: 2%;
+    transition: 1s;
+}
+
+.noticia:hover {
+    background-color: black;
 }
 
 .centrar {
     border: 2px solid green;
     width: 60vw;
     margin: auto;
-    padding: 1em;
+    padding: 3em;
 }
