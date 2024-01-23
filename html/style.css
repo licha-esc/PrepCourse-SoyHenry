@@ -1,3 +1,10 @@
 .noticia {
     width: 450px;
 }
+
+.centrar {
+    border: 2px solid green;
+    width: 60vw;
+    margin: auto;
+    padding: 1em;
+}
