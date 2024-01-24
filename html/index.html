@@ -11,7 +11,7 @@
 
 <body>
     <header> <!--  Dentro de esta etiqueta va el contenido del encabezado de la página. -->
-        <div class="centrar">
+        <div class="titulos">
             <h1>Este es el título principal de mi página web</h1>
 
             <span>HOME</span>
@@ -22,9 +22,26 @@
     </header>
 
     <main>
-        
-        <img src="./noticias.png" alt="noticias" class="noticia">
-        <!-- la etiqueta img nos permite a través de un atributo src establecer una imágen-->
+        <article>
+            <div id="cards-container">
+
+                <div class="cards">
+                    <h4 class="title">Locales</h4>
+                    <img src="./noticia1.png" alt="noticias locales" class="noticia-img">
+                    <!-- la etiqueta img nos permite a través de un atributo src establecer una imágen-->
+                </div>
+                <div class="cards">
+                    <h4 class="title">Internacionales</h4>
+                    <img src="./noticia2.jpg" alt="noticias internacionales" class="noticia-img">
+                </div>
+                <div class="cards">
+                    <h4 class="title">Provinciales</h4>
+                    <img src="./noticia3.jpg" alt="noticias provinciales" class="noticia-img">
+                </div>
+
+            </div>
+
+        </article>
 
         <section>
             <article> <!--  se utiliza para agrupar información muy relevante de una página o documento concreto -->
@@ -48,11 +65,11 @@
                 <h3>Esta es la noticia Nº2</h3>
                 <p>Este es un listado de cosas importantes para esta noticia</p>
 
-                    <ol>
-                        <li>Este es el item</li>
-                        <li>Este es el item</li>
-                        <li>Este es el item</li>
-                    </ol>
+                <ol>
+                    <li>Este es el item</li>
+                    <li>Este es el item</li>
+                    <li>Este es el item</li>
+                </ol>
 
             </article>
             <hr>

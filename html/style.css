@@ -3,24 +3,45 @@ body {
 }
 
 
-.noticia {
-    width: 450px;
+.noticia-img {
+    width: 290px;
+    height: 160px;
     border: 2px solid black;
-    width: fit-content;
-    /* ajusta el ancho al ancho del contenido */
-    padding: 1em 1em 1em 1em;
+    /* width: fit-content; ajusta al ancho del contenido */
+    padding: 0.5em 0.5em 0.5em 0.5em;
     border-radius: 2%;
     transition: 1s;
-    margin-top: 1em;
 }
 
-.noticia:hover {
+.noticia-img:hover {
     background-color: black;
 }
 
-.centrar {
+.titulos {
     border: 2px solid green;
     width: 60vw;
     margin: auto;
-    padding: 3em;
+    padding: 2.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: center;
+}
+
+#cards-container {
+    width: 80vw;
+    margin: auto;
+    margin-top: 1.5em;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
 }
