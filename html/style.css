@@ -45,3 +45,7 @@ body {
     flex-direction: row;
     justify-content:space-around;
 }
+
+footer {
+    margin-top: 1.5em;
+}
