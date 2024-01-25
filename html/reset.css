@@ -26,10 +26,10 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 /* Establecer estilos básicos para los enlaces */
-a {
-    text-decoration: none; /* Eliminar el subrayado predeterminado de los enlaces */
-    color: inherit; /* Heredar el color del texto del elemento padre */
-}
+/* a {
+    /* text-decoration: none;  Eliminar el subrayado predeterminado de los enlaces */
+    /* color: inherit;  Heredar el color del texto del elemento padre */ 
+*/
 
 /* Establecer estilos básicos para las imágenes */
 img {
