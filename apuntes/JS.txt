@@ -1,11 +1,11 @@
 JS:
-lenguaje de tipado dinámico (no se necesita declarar y establecer un tipo específico de variables) por lo cual es más sencillo. 
-Técnicamente es un lenguaje de programación interpretado, por lo que no es necsario compilar los programas para ejecutarlos.
+lenguaje de tipado dinï¿½mico (no se necesita declarar y establecer un tipo especï¿½fico de variables) por lo cual es mï¿½s sencillo. 
+Tï¿½cnicamente es un lenguaje de programaciï¿½n interpretado, por lo que no es necsario compilar los programas para ejecutarlos.
 
 
-Operadores de comparación:
+Operadores de comparaciï¿½n:
 
-= operador de asignación
+= operador de asignaciï¿½n
 == operador de igualdad. Verifica que coincida el tipo de valor.
 === operador de igualdad estricta. Verifica que coincida tanto el tipo de valor como el tipo de dato .
 
@@ -20,19 +20,19 @@ var a = 1;
 var b = 2;
 var c = a = b;
 
-Para entender cómo se evalúa esta expresión, es importante comprender la asociatividad y precedencia de los operadores de asignación en JavaScript.
-En JavaScript, el operador de asignación (=) tiene una asociatividad de derecha a izquierda, lo que significa que se evalúa de derecha a izquierda cuando hay múltiples operadores de asignación en una expresión.
+Para entender cï¿½mo se evalï¿½a esta expresiï¿½n, es importante comprender la asociatividad y precedencia de los operadores de asignaciï¿½n en JavaScript.
+En JavaScript, el operador de asignaciï¿½n (=) tiene una asociatividad de derecha a izquierda, lo que significa que se evalï¿½a de derecha a izquierda cuando hay mï¿½ltiples operadores de asignaciï¿½n en una expresiï¿½n.
  
-Ahora, desglosemos la expresión var c = a = b;:
+Ahora, desglosemos la expresiï¿½n var c = a = b;:
 
-Comienza con la asignación más a la derecha: a = b;. Esto asigna el valor de b a la variable a.
-Luego, toma el resultado de esa asignación (b) y lo asigna a la variable c.
-Por lo tanto, después de ejecutar esa línea de código, las variables tendrán los siguientes valores:
+Comienza con la asignaciï¿½n mï¿½s a la derecha: a = b;. Esto asigna el valor de b a la variable a.
+Luego, toma el resultado de esa asignaciï¿½n (b) y lo asigna a la variable c.
+Por lo tanto, despuï¿½s de ejecutar esa lï¿½nea de cï¿½digo, las variables tendrï¿½n los siguientes valores:
 
-a tendrá el valor de b (que es 2).
+a tendrï¿½ el valor de b (que es 2).
 b se mantiene con su valor original (2).
-c también tendrá el valor de b (que es 2).
-Esencialmente, la expresión var c = a = b; está asignando el valor de b a las variables a, b, y c. Recuerda que la expresión se evalúa de derecha a izquierda debido a la asociatividad de los operadores de asignación.
+c tambiï¿½n tendrï¿½ el valor de b (que es 2).
+Esencialmente, la expresiï¿½n var c = a = b; estï¿½ asignando el valor de b a las variables a, b, y c. Recuerda que la expresiï¿½n se evalï¿½a de derecha a izquierda debido a la asociatividad de los operadores de asignaciï¿½n.
 
 
 Funciones: hay 3 formas
@@ -43,14 +43,14 @@ function sumaTres(x) {
     return x + 3;
 }
 
-// SEGUNDO: En este caso la función se asigna a una variable
+// SEGUNDO: En este caso la funciï¿½n se asigna a una variable
 
 var sumaTres = (x) {
     return x + 3;
 }
 
 
-// TERCERO: guardar función dentro de una variable. En este caso tmb se utiliza una sintáxis de función flecha
+// TERCERO: guardar funciï¿½n dentro de una variable. En este caso tmb se utiliza una sintï¿½xis de funciï¿½n flecha
 
 var sumaTres = (x) => {
     return x + 3;
@@ -64,26 +64,26 @@ Objeto Math
 
 Math.pow:
 
-Nos permite potenciar un número. Por ejemplo, 2 elevado al cubo, sería igual a multioplicar 2 x 2 x 2. Es decir, 8.
-El primer número es la base y el segundo será la potencia.
+Nos permite potenciar un nï¿½mero. Por ejemplo, 2 elevado al cubo, serï¿½a igual a multioplicar 2 x 2 x 2. Es decir, 8.
+El primer nï¿½mero es la base y el segundo serï¿½ la potencia.
 Math.pow(2, 3); // 8
 
 
 Math.round & Math.floor & Math.ceil:
 
-A veces necesitamos redondear un número decimal, ya que muchas veces las operaciones matemáticas pueden resultar en números con coma. Para esto, JavaScript nos ofrece tres métodos
+A veces necesitamos redondear un nï¿½mero decimal, ya que muchas veces las operaciones matemï¿½ticas pueden resultar en nï¿½meros con coma. Para esto, JavaScript nos ofrece tres mï¿½todos
 
 Math.round
-readondeará el número decimal al entero más próximo. Es decir que, si tenemos 0.49, el resultado será 0. En cambio, si tenemos 0.50, el resultado será 1.
+readondearï¿½ el nï¿½mero decimal al entero mï¿½s prï¿½ximo. Es decir que, si tenemos 0.49, el resultado serï¿½ 0. En cambio, si tenemos 0.50, el resultado serï¿½ 1.
 Math.round(0.49); // 0
 Math.round(0.50); // 1
 
 Math.floor
-redondeará el número decimal al entero de menor valor. Por ejemplo, si tenemos el número 5.93, el resultado será 5.
+redondearï¿½ el nï¿½mero decimal al entero de menor valor. Por ejemplo, si tenemos el nï¿½mero 5.93, el resultado serï¿½ 5.
 Math.floor(5.93); // 5
 
 Math.ceil
-este método, al contrario que el anterior, redondeará un número al siguiente entero. Por ejemplo, si tenemos 3.27 el resultado será 4.
+este mï¿½todo, al contrario que el anterior, redondearï¿½ un nï¿½mero al siguiente entero. Por ejemplo, si tenemos 3.27 el resultado serï¿½ 4.
 
 
 IF/ELSE:
@@ -92,29 +92,29 @@ Math.ceil(3.27); // 4
 
 
 Math.max & Math.min:
-Estos dos métodos nos permitirán conocer el valor máximo o mínimo de un conjunto de números. Por ejemplo, si tenemos los números 1, 2, 3, 4 y 5, el máximo será el 5 y el mñínimo el número 1.
+Estos dos mï¿½todos nos permitirï¿½n conocer el valor mï¿½ximo o mï¿½nimo de un conjunto de nï¿½meros. Por ejemplo, si tenemos los nï¿½meros 1, 2, 3, 4 y 5, el mï¿½ximo serï¿½ el 5 y el mï¿½ï¿½nimo el nï¿½mero 1.
 Math.max(1, 2, 3, 4, 5); // 5
 Math.min(1, 2, 3, 4, 5); // 1
 
 
 Math.random:
-permite generar un número aleatorio. Es importante tener encuenta que el número que se generará es decimal, y puede ser cualquiera entre el 0 y el 1. 
+permite generar un nï¿½mero aleatorio. Es importante tener encuenta que el nï¿½mero que se generarï¿½ es decimal, y puede ser cualquiera entre el 0 y el 1. 
 Math.random(); // 0.9280584754129286
 
 
 BUCLES:
 
 for: 
-es una estructura de control que permite repetir un bloque de código un nº determinado de veces. Se utiliza cuando conocemos de antemano la cantidad exacta de pasos que queremos ejecutar.
+es una estructura de control que permite repetir un bloque de cï¿½digo un nï¿½ determinado de veces. Se utiliza cuando conocemos de antemano la cantidad exacta de pasos que queremos ejecutar.
 
-for (incialización; condición; incremento/decremento) {
-    // Código a ejecutar en cada iteración.
+for (incializaciï¿½n; condiciï¿½n; incremento/decremento) {
+    // Cï¿½digo a ejecutar en cada iteraciï¿½n.
 }
 
 se compone de 3 valores: 
-1-inicialización: variable de iteración. La variable se inicializa en el valor que se le asigne.
-2-condición: si es verdadera el bloque de código dentro del bucle se seguirá ejecutándo. Si es falsa se detiene. 
-3-actualización: instrucción para decidir que se debe hacer con la variable de iteración cada vez que termina de ejecutarse cada ciclo.
+1-inicializaciï¿½n: variable de iteraciï¿½n. La variable se inicializa en el valor que se le asigne.
+2-condiciï¿½n: si es verdadera el bloque de cï¿½digo dentro del bucle se seguirï¿½ ejecutï¿½ndo. Si es falsa se detiene. 
+3-actualizaciï¿½n: instrucciï¿½n para decidir que se debe hacer con la variable de iteraciï¿½n cada vez que termina de ejecutarse cada ciclo.
 
 var suma = 0;
 for (var i=0 ; i<10 ; i++) {
@@ -124,22 +124,32 @@ for (var i=0 ; i<10 ; i++) {
 
 
 while: 
-se utiliza cuando no conocemos de antemano la cantidad exacta de pasos necesarios para finalizar la ejecución.
+se utiliza cuando no conocemos de antemano la cantidad exacta de pasos necesarios para finalizar la ejecuciï¿½n.
 
-while (contición) {
-    // Código a ejecutar mientras la condición sea verdadera. 
+while (conticiï¿½n) {
+    // Cï¿½digo a ejecutar mientras la condiciï¿½n sea verdadera. 
 }
 
 let contador = 0;
 while (contador < 5) {
-    // Código a ejecutar mientras contador sea menor que 5.
+    // Cï¿½digo a ejecutar mientras contador sea menor que 5.
     contador++;
 }   
 
 
-
 do-while:
-Se ejecuta una sentencia especificada hasta que la condición de comprobación se evalúa como falso. 
+Se ejecuta una sentencia especificada hasta que la condiciÃ³n de comprobaciï¿½n se evalï¿½a como falso. En el do-while a diferencia del while la condiciÃ³n se cumple por lo menos una vez.
+do {
+    // CÃ³digo a ejecutar al menos una vez.
+} while (condiciÃ³n);
 
 
+break: 
+permite salir del bucle antes de que se complete normalmente, segÃºn una condiciÃ³n especÃ­fica.
+for (let i = 0; i < 5; i++) {
+    if (i === 3) {
+        break; // Finalizar el bucle cuando i es igual a 3.
+    }
+    console.log(i);
+}
 
