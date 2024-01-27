@@ -1,0 +1,38 @@
+.miTexto {
+	color: green;
+}
+
+
+Selector -> .miTexto
+Propiedad -> color
+Valor-> green
+
+
+El selector será una referencia que nos permitirá seleccionar un elemento HTML. La propiedad dirá qué característica queremos cambiar de ese elemento. Por último, el valor dirá cuál será el estilo que tendrá esa propiedad.
+
+clases: se utiliza cuando se quiere aplicar un conjunto de estilos a múltiples elementos en la página.
+
+id: se usa cuando se quiere aplicar estilos a un elemento único en la página. No debería haber 2 elementos con el mismo id 
+
+
+Medidas:
+em: es una medida relativa al tamaño de fuente base del documento / página en el que estamos trabajando. El navegador de cada dispositivo establece el tamaño de fuente base. Entonces el em es una cantidad de veces ese tamaño base.
+font-size: 3em; Esto indíca que en el dispositivo en que se esté visualizando un tamaño distinto nuestro documento siempre va a haber una relación de 3 veces el tamaño de la fuente base. También permite usar decimales: 2.8 em; etc
+
+ 
+*No es del todo correcto asignarle estilos a etiquetas como header, main, article... en algunos casos si pero es mejor ponerlos en un div adentro del header, main, etc.
+
+
+Estilos:
+
+Bordes: la propiedad border tiene 3 partes >  tamaño - tipo - color.
+
+centrar un borde:
+también se utilizan medidas relativas "viewportr width" que es el porcentaje del ancho de la pantalla de donde yo este viendo el documento
+width: 60vw; Sería un 60% del ancho de la pantalla donde se mire.
+margin
+margin: auto; se usa para que se centre un div de forma proporcional.
+padding: se usa para que el contenido se despegue del borde
+
+Flexbox:
+

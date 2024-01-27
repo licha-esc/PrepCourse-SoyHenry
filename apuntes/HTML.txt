@@ -1,0 +1,50 @@
+Formateando el texto en HTML:
+El uso de estas etiquetas refuerza el concepto de web semántica y el sentido que le damos a nuestro HTML.
+
+Negrita
+Podemos escribir incluyéndose dentro de las etiquetas <b></b> o <strong></strong>.
+Nota: ¿Qué diferencia hay entre B y STRONG? Aunque las dos etiquetas hacen el mismo efecto, tienen una peculiaridad que las hace distintas. La etiqueta B indica negrita, mientras que la etiqueta STRONG indica que se debe escribir con fuerza.
+
+Itálica
+También en este caso existen dos posibilidades, <i></i> o <em></em>.
+
+Subrayado
+<u></u> (underlined). El uso de subrayados ha de ser aplicado con mucha precaución dado que los enlaces hipertexto van, a no ser que se indique lo contrario, subrayados con lo que podemos confundir al lector
+
+Subíndices y superíndices
+Este tipo de formato resulta de extrema utilidad para textos científicos.
+<sup></sup> para los superíndices.
+<sub></sub> para los subíndices.
+
+Anidar etiquetas
+Todas estas etiquetas y por supuesto el resto de las vistas y que veremos más adelante pueden ser anidadas unas dentro de otras de manera a conseguir resultados diferentes. Así, podemos sin ningún problema crear texto en negrita e itálica embebiendo una etiqueta dentro de la otra:
+<b> Esto solo está en negrita y <i> esto en negrita e itálica </i></b>
+
+
+Sintaxis de un enlace:
+<a href="rutaDestino"> Haz click aquí </a>
+<a href="https://www.google.com/">Ir a Google</a>
+
+si queremos que el contenido del enlace sea una imágen:
+<a href="https://www.google.com/"><img src="logo.jpg"></a>
+
+
+Tipos de enlaces:
+Dependiendo del tipo cambiaran algunas cosas a la hora de construirlos.
+En función del destino los enlaces pueden ser agrupados en:
+
+Enlaces internos: los que se dirigen a otras partes dentro de la misma página.
+
+Enlaces locales: los que se dirigen a otras páginas del mismo sitio web.
+
+Enlaces remotos: los dirigidos hacia páginas de otros sitios web.
+
+Enlaces de emails: para crear un mensaje de correo dirigido a una dirección.
+
+Enlaces con archivos: para que los usuarios puedan hacer download de ficheros.
+
+
+Sintaxtis de enlaces internos dentro de la misma pág:
+<a href="#abajo">Ir abajo</a>
+
+<footer class="#abajo"></footer>
