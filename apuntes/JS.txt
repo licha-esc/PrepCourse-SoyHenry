@@ -153,3 +153,28 @@ for (let i = 0; i < 5; i++) {
     console.log(i);
 }
 
+
+continue:
+La declaración continue se utiliza dentro de los Bucles For. Nos permite omitir alguna de las iteraciones si se cumple una condición específica.
+for (let i = 1; i <= 5; i++) {
+  if (i % 2 === 0) continue;
+  console.log(`El número ${i} es impar.`);
+}
+
+
+Arrays:
+var listaDeCompras = [];
+
+agregar elementos a un array en una posición x:
+listaDeCompras[3] = 'Tomates'; (se agregará en el índice 4)
+
+para acceder a un elemento del arreglo tenemos que saber cual 
+
+es su índice:
+listaDeCompras[1];
+
+también se puede guardar ese valor dentro de una variable y 
+
+hacer un console.log:
+var elementoDelArray = listaDeCompras[1];
+console.log(elementoDelArray);
