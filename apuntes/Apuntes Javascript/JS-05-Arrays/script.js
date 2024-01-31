@@ -134,7 +134,6 @@ console.log(precios3);
 //! VALIDADORES: 
 //? .every()
 // Verifica que TODOS los elementos cumplan alguna condición.
-
 //Forma más larga:
 let precios5 = [12, 4, 29, 98, 50];
 let result = precios5.every(function (item) {
