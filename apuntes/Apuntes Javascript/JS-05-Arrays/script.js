@@ -1,101 +1,91 @@
 //* ARRAYS:
-/* Son colecciones de datos en formato de matriz o vector.
+/* Son una lista ordenada de elementos, donde cada elemento tiene una posición única.
 Nos permiten agrupar conjuntos de valores relacionados en una misma variable.
-Los arrays poseen un formato de lista, es decir, una secuencia de valores agrupados dentro de un par de [] y separados por coma. */
+Elementos son los datos que hayamos guardado e índice es la posición de cada uno de esos elementos. */
 
 const frutas = ['Manzana', 'Pera', 'Frutilla', 'Kiwi', 'Sandia'];
-
 const datos = ["Jose", 23, true, "Calle Falsa 123"];
-
 /* Estos valores ocupan una posición dentro del array. A esa posición se la conoce como índice y siempre comienza en 0.
 Al tener 5 elementos, estos comienzan desde el índice 0 (Manzana) hasta el índice 4 (Sandía).
-
-En este ejemplo conocemos la extensión del array, pero muchas veces consultaremos este dato ya sea porque no lo sabemos o porque fue modificado a través de la ejecución del programa.
-
-Para saber cuántos elementos posee un array debemos acceder a su propiedad length (al igual que sucede con los strings), de este modo obtendremos la cantidad de elementos que existen en nuestra colección. */
-
-console.log(frutas.length); // 5
-
+En este ejemplo conocemos la extensión del array, pero muchas veces consultaremos este dato ya sea porque no lo sabemos o porque fue modificado a través de la ejecución del programa. */
+//! CONSULTAR LONGITUD DEL ARRAY:
+console.log(frutas.length);
 // También podemos consultar los elementos de un array en relación a la posición que ocupan dentro de él.
-// Para ellos usaremos la siguiente sintaxis: 
-
-console.log(frutas[2]); // Frutilla
-
+// Para ellos usaremos la siguiente sintaxis:
+console.log(frutas[2]);
 // A partir de la especificación EcmaScript 2022, podemos acceder a un array con el método .at() :
-
-console.log(frutas.at(3)); // Kiwi
-
+console.log(frutas.at(2));
 
 
 //* MÉTODOS DE ARRAYS:
 // Son funciones nativas que poseen los arrays y que nos permiten trabajar con ellos de forma sencilla, poniendo a disposición herramientas de adición, eliminación, filtrado y ordenado de elementos entre otras cosas.
+//! AÑADIR ELEMENTOS:
+frutas[5] = 'Melón'; // Agrega un elemento a la posición que indiquemos entre los []. Si agregamos una posición que ya existe, reemplaza al elemento existente. 
+console.log(frutas);
 
-//! AÑADIR O ELIMINAR ELEMENTOS:
-// Estos métodos son mutables por lo que cada vez que los utilicemos estaremos modificando el valor original del array en cuestión.
-
-//! AÑADIR:
 frutas.push('Ananá'); // Agrega un elemento al final del array.
-frutas.unshift('Melón'); // Agrega un elemento al inicio del array.
+console.log(frutas);
 
-console.log(frutas); // ['Melón', 'Manzana', 'Pera', 'Frutilla', 'Kiwi', 'Sandia', 'Ananá'];
+frutas.unshift('Ciruela'); // Agrega un elemento al inicio del array.
+console.log(frutas);
 
-//! ELIMINAR:
+//! ELIMINAR ELEMENTOS:
 frutas.pop(); // elimina el último elemento y lo retorna.
+console.log(frutas);
+
 frutas.shift(); // elimina el primer elemento y lo retorna.
-
-console.log(frutas); // ['Manzana', 'Pera', 'Frutilla', 'Kiwi', 'Sandia'];
-
+console.log(frutas);
 
 //! CONCATENAR ELEMENTOS:
 // Nos permiten combinar arrays o crear cadenas de texto a partir de los valores de un mismo arreglo:
-
-//? concat()
-// combina 2 o más arrays pasados por parámetro.
-
+//? .concat()
+// Combina 2 o más arrays pasados por parámetro.
 const precioRemeras = [100, 320, 257];
 const precioMedias = [50, 35, 23];
 const precios2 = precioRemeras.concat(precioMedias);
+console.log(precios2);
 
-console.log(precios2); // [100, 320, 257, 50, 35, 23]
-
-
-//? join()
+//? .join()
 // Crea una cadena de texto a partir de todos los elementos de un array. Recibe por parámetro un separador de elementos de forma opcional.
-
 let paises = ['Perú', 'Argentina', 'Ecuador', 'Uruguay'];
-
-console.log(paises.join(' - ')); // Perú - Argentina - Ecuador - Uruguay
-
+console.log(paises.join(' - '));
 
 //! RECORRER ELEMENTOS:
-// Permite recorrer los elementos de un array y ejecutar una acción frente a cada iteración. El método forEach() no devuelve nada y espera que se le pase por parámetro una función de callback que se ejecutará por cada elemento del array.
+//? .forEach()
+// Este método permite recorrer cada elemento del array y ejecutar una función de callback proporcionada como argumento.
+// Ejemplo 1
+let num = [1, 2, 3, 4, 5];
+num.forEach((numerito, index, array) => {
+    // Multiplicar cada número por 2 y reemplazar el valor en el array.
+    array[index] = numerito * 2;
+}
+);
+console.log(num);
 
+// Ejemplo 2
 let verduras = ['lechuga', 'morrón', 'ajo', 'papa', 'zanahoria'];
+verduras.forEach((verd) => console.log(verd));
+console.log(verduras);
 
-verduras.forEach((verd) => console.log(verd)); // lechuga, morrón, ajo, papa, zanahoria
-
+// Ejemplo 3
+let suma = 0;
+num.forEach((num) => suma += num);
+console.log(suma);
 
 //! FILTRAR ELEMENTOS:
-//? filter()
-// filtra los elementos que cumplen cierta condición. Se usa cuando tenemos un array y necesitamos filtrar datos
+//? .filter()
+// filtra los elementos que cumplen cierta condición. Se usa cuando tenemos un array y necesitamos filtrar datos.
 // Se pasa una función de callback con la condición que deben cumplir los elementos para ser filtrados.
-
 let precio = [100, 349, 3, 63, 524, 217, 14];
-
-let mayores = precio.filter(precio => precio >= 100);
-
-console.log(mayores); // [100, 349, 524, 217]
-
+let mayores = precio.filter((costo) => costo >= 100);
+console.log(mayores);
 
 //! BUSCAR ELEMENTOS:
 //? find()
 // Busca en un arreglo según una condición y devuelve el PRIMER valor que logre cumplirla.
-
-const numeros = [200 , 40, 1000, 2000];
-
+const numeros = [200, 40, 1000, 500, 700];
 const filtrados = numeros.find(item => item >= 350);
-
-console.log(filtrados); // 1000
+console.log(filtrados);
 
 
 //* MODIFICAR O CREAR ARRAYS A PARTIR DE OTROS:
@@ -136,7 +126,7 @@ Para evitar esto, podemos aplicar el siguiente hack:
 Para ordenar en orden ASC: */
 let precios = [95, 5, 25, 10, 250];
 
-precios.sort((a,b) => a - b);
+precios.sort((a, b) => a - b);
 
 console.log(precios);
 
@@ -144,7 +134,7 @@ console.log(precios);
 // Para ordenar en orden DESC:
 let precios3 = [95, 5, 25, 10, 2500];
 
-precios3.sort((a,b) => b - a);
+precios3.sort((a, b) => b - a);
 
 console.log(precios3);
 
@@ -178,9 +168,9 @@ precios4.forEach(precio => console.log(precio));
 // Verifica que TODOS los elementos cumplan alguna condición.
 
 //Forma más larga:
-let precios5 = [ 12, 4, 29, 98, 50]
+let precios5 = [12, 4, 29, 98, 50]
 
-let result = precios5.every( function(item) {
+let result = precios5.every(function (item) {
     if (item > 0) {
         return true;
     } else {
@@ -191,7 +181,7 @@ let result = precios5.every( function(item) {
 console.log(result); // true xq todos los elementos son > 0.
 
 // Forma más corta:
-let resultado = precios5.every( item => item > 6);
+let resultado = precios5.every(item => item > 6);
 
 console.log(resultado); // false xq no todos los elementos son > 6.
 
@@ -200,7 +190,7 @@ console.log(resultado); // false xq no todos los elementos son > 6.
 //? some() 
 // Verifica que ALGUNOS elementos cumplan alguna condición.
 
-let resultados = precios5.some( item => item > 6);
+let resultados = precios5.some(item => item > 6);
 
 console.log(resultados); // true xq algunos elementos son > 6. Con que uno solo cumpla esa condición es true.
 
