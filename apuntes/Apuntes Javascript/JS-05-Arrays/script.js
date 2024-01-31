@@ -53,13 +53,13 @@ console.log(paises.join(' - '));
 //! RECORRER ELEMENTOS:
 //? .forEach()
 // Este método permite recorrer cada elemento del array y ejecutar una función de callback proporcionada como argumento.
+
 // Ejemplo 1
 let num = [1, 2, 3, 4, 5];
 num.forEach((numerito, index, array) => {
     // Multiplicar cada número por 2 y reemplazar el valor en el array.
     array[index] = numerito * 2;
-}
-);
+});
 console.log(num);
 
 // Ejemplo 2
@@ -81,7 +81,7 @@ let mayores = precio.filter((costo) => costo >= 100);
 console.log(mayores);
 
 //! BUSCAR ELEMENTOS:
-//? find()
+//? .find()
 // Busca en un arreglo según una condición y devuelve el PRIMER valor que logre cumplirla.
 const numeros = [200, 40, 1000, 500, 700];
 const filtrados = numeros.find(item => item >= 350);
@@ -89,87 +89,54 @@ console.log(filtrados);
 
 
 //* MODIFICAR O CREAR ARRAYS A PARTIR DE OTROS:
-// Hay situaciones en las que tenemos un array y queremos crear nuevos subarrays a partir del original, o simplemente deseamos modificarlo para hacer ciertos cambios, pero de una forma más general y no tener que hacerlo elemento a elemento.
-
-//! SEPARAR O CORTAR:
-//? split() 
+//! SEPARAR
+//? .split()
 // Creamos un array a partir de una cadena de texto.
 // El parámetro es la condición que separa a los elementos en la cadena.
-
 let nombres = 'Juan, José, Mara, Ana';
-
 nombres = nombres.split(',');
+console.log(nombres);
 
-console.log(nombres); // [ 'Juan', ' José', ' Mara', ' Ana' ]
-
-
-//? slice() 
-// Devuelve una porción del array desde un rango definido.
+//! CORTAR:
+//? .slice()
+// Devuelve una porción del array.
 // Por parámetro pasamos la posición inicial y final de los elementos a cortar.
-
-const animales = ['Pato', 'Perro', 'Gato', 'Loro', 'Puma', 'Leon'];
-
-console.log(animales.slice(2, 4)); // ['Gato', 'Loro']
-
+const animales = ['Pato', 'Perro', 'Gato', 'Loro', 'Puma', 'Leon', 'Pez'];
+console.log(animales.slice(2, 5));
 
 //! ORDENAR:
-//? sort()
+//? .sort()
 // Permite ordenar alfabeticamente los elementos de un array.
-
 const animales2 = ["pato", "perro", "gato", "loro", "puma"];
-
-console.log(animales2.sort()); // [ 'gato', 'loro', 'pato', 'perro', 'puma' ]
+console.log(animales2.sort());
 
 /* En caso que deseemos ordenar números, el método sort resulta errático ya que valores como 10 y 100, los tomaría consecutivos ya que el 1 siempre viene antes del 2 alfabéticamente.
-Para evitar esto, podemos aplicar el siguiente hack:
+Para evitar esto, podemos aplicar lo siguiente:
 
-Para ordenar en orden ASC: */
+Ordenar en forma ASC: */
 let precios = [95, 5, 25, 10, 250];
-
 precios.sort((a, b) => a - b);
-
 console.log(precios);
 
-
-// Para ordenar en orden DESC:
+// Ordenar en forma DESC:
 let precios3 = [95, 5, 25, 10, 2500];
-
 precios3.sort((a, b) => b - a);
-
 console.log(precios3);
 
 
-
 //* ARRAY FUNCTIONS:
-// Son métodos de array que reciben una función de callback por parámetro para obtener cierto resultado. 
-
+// Son métodos de array que reciben una función de callback por parámetro para obtener cierto resultado.
 //! ITERADORES:
-//? forEach() 
+//? .forEach() 
 // Este método no retorna ningún valor, solamente se limita a ejecutar el callback que le pasemos por cada elemento del array. 
-
-const arr = [1, 2, 3, 4, 5, 6];
-
-// forma larga:
-// arr.forEach(item => {
-//     console.log(item);
-// }); // 1 2 3 4 5 6 
-
-// resumida:
-arr.forEach(item => console.log(item));
-
-//---//
-let precios4 = [95, 5, 25, 8, 33];
-
-precios4.forEach(precio => console.log(precio));
-
+// Los ejemplos están más arriba.
 
 //! VALIDADORES: 
-//? every() 
+//? .every()
 // Verifica que TODOS los elementos cumplan alguna condición.
 
 //Forma más larga:
-let precios5 = [12, 4, 29, 98, 50]
-
+let precios5 = [12, 4, 29, 98, 50];
 let result = precios5.every(function (item) {
     if (item > 0) {
         return true;
@@ -177,44 +144,28 @@ let result = precios5.every(function (item) {
         return false;
     }
 });
-
 console.log(result); // true xq todos los elementos son > 0.
 
 // Forma más corta:
 let resultado = precios5.every(item => item > 6);
-
 console.log(resultado); // false xq no todos los elementos son > 6.
 
-
-
-//? some() 
+//? .some() 
 // Verifica que ALGUNOS elementos cumplan alguna condición.
-
 let resultados = precios5.some(item => item > 6);
-
 console.log(resultados); // true xq algunos elementos son > 6. Con que uno solo cumpla esa condición es true.
 
-
 //! ACUMULADORES:
-//? reduce()
-// Recorre cada elemento del array y va acumulando en una variable el valor anterior sumando el valor actual de esa iteración.
-
+//? .reduce()
+// Recorre cada elemento del array y va acumulando en una variable el valor anterior sumando el valor actual de la iteración.
 const nums = [1, 2, 3, 4, 5, 6];
-
 const sum = nums.reduce((total, valor) => total + valor);
-console.log(sum); // 21
-
+console.log(sum);
 
 //! TRANSFORMADORES:
-//? map()
-/* Permite transformar los elementos de un array creando un nuevo array con nuevos elementos (pero misma longitud) a partir de una condición. 
-
+//? .map()
+/* Permite transformar los elementos de un array creando un nuevo array con nuevos elementos (pero misma longitud) a partir de una condición.
 El método de map() toma un array con una cantidad de elementos determinada y crea uno nuevo (de igual longitud que el inicial) pero los elementos de este nuevo array van a ser el resultado de la función de callback pasada por parámetro. */
-
 const names = ["Carla", "Pablo", "Lucia", "José", "Camila"];
 const nameSizes = names.map(name => name.length); // En este caso la función callback es el length, que retorna la cantidad de letras de un texto (string).
-
-console.log(nameSizes); // [5, 5, 5, 4, 6]
-
-
-
+console.log(nameSizes);
