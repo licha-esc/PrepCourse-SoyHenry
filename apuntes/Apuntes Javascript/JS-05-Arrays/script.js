@@ -53,7 +53,6 @@ console.log(paises.join(' - '));
 //! RECORRER ELEMENTOS:
 //? .forEach()
 // Este método permite recorrer cada elemento del array y ejecutar una función de callback proporcionada como argumento.
-
 // Ejemplo 1
 let num = [1, 2, 3, 4, 5];
 num.forEach((numerito, index, array) => {
@@ -131,7 +130,7 @@ console.log(precios3);
 // Este método no retorna ningún valor, solamente se limita a ejecutar el callback que le pasemos por cada elemento del array. 
 // Los ejemplos están más arriba.
 
-//! VALIDADORES: 
+//! VALIDADORES:
 //? .every()
 // Verifica que TODOS los elementos cumplan alguna condición.
 //Forma más larga:
@@ -168,3 +167,16 @@ El método de map() toma un array con una cantidad de elementos determinada y cr
 const names = ["Carla", "Pablo", "Lucia", "José", "Camila"];
 const nameSizes = names.map(name => name.length); // En este caso la función callback es el length, que retorna la cantidad de letras de un texto (string).
 console.log(nameSizes);
+
+//* BUCLES EN ARRAYS
+//? for
+function encontrarLetraP(string) {
+    var letras = string.split('');
+    for (let i = 0; i < letras.length; i++) {
+        if (letras[i] === 'p') {
+            return 'contiene p';
+        }
+    }
+}
+
+console.log(encontrarLetraP('javascript'));
