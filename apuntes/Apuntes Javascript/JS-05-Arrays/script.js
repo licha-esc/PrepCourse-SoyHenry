@@ -168,7 +168,8 @@ const names = ["Carla", "Pablo", "Lucia", "José", "Camila"];
 const nameSizes = names.map(name => name.length); // En este caso la función callback es el length, que retorna la cantidad de letras de un texto (string).
 console.log(nameSizes);
 
-//* BUCLES EN ARRAYS
+
+//* BUCLES EN ARRAYS:
 //? for
 function encontrarLetraP(string) {
     var letras = string.split('');
@@ -178,5 +179,12 @@ function encontrarLetraP(string) {
         }
     }
 }
-
 console.log(encontrarLetraP('javascript'));
+
+//? while
+// agregar 5 veces una palabra en un arreglo
+var arry = [];
+while (arry.length < 5) {
+    arry.push('cat');
+}
+console.log(arry);
