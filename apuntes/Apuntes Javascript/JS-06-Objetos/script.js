@@ -1,7 +1,7 @@
 //! OBJETOS: var nombreVariable = {};
 /*
 · Estructura en la que se puede guardar información y funcionalidades.
-· Forma específica de organizar la información: almacenan datos en pares clave : valor.
+· Forma específica de organizar la información: almacenan datos en pares clave:valor (key:value).
 · Los tipos de datos primitivos en JS son undefined, null, boolean, number y string. El resto de elementos son objetos, tanto las funciones, arrays, expresiones regulares como los propios objetos. Un objeto es un contenedor de propiedades, la cual tiene un nombre y un valor. El nombre de una propiedad puede ser una cadena de caracteres, incluso una vacía. El valor puede ser cualquiera que podamos utilizar en JS, excepto undefined.
 
 Terminología:
@@ -13,7 +13,6 @@ Terminología:
 
 El array sirve para tener muchos elementos que son del mismo tipo de dato. 
 El objeto para tener muchos elementos que se relacionan entre si porque pertenecen a una identidad pero pueden ser de diferentes tipos de datos.
-
 Comparación entre array y objeto:
 ARRAY: En teoría un array es un objeto en donde la key que usa para guardar cada valor de los elementos es la posición. */
 const superheroe = ['Superman', 'Clark', 'Kent', 'DC'];
