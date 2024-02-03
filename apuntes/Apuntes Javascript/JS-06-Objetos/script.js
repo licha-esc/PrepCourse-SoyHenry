@@ -1,27 +1,25 @@
-//! OBJETOS: 
-/*links:
-https://es.javascript.info/object
-https://www.youtube.com/watch?v=5DaZXXbHI_U&ab_channel=deivchoi
-
-Los tipos primitivos en JavaScript son undefined, null, boolean, number y string. El resto de elementos son objetos, tanto las funciones, arrays, expresiones regulares como los propios objetos. Un objeto es un contenedor de propiedades, la cual tiene un nombre y un valor. El nombre de una propiedad puede ser una cadena de caracteres, incluso una vacía. El valor puede ser cualquier valor que podamos utilizar en JavaScript, excepto undefined.
+//! OBJETOS: var nombreVariable = {};
+/*
+· Estructura en la que se puede guardar información y funcionalidades.
+· Forma específica de organizar la información: almacenan datos en pares clave : valor.
+· Los tipos de datos primitivos en JS son undefined, null, boolean, number y string. El resto de elementos son objetos, tanto las funciones, arrays, expresiones regulares como los propios objetos. Un objeto es un contenedor de propiedades, la cual tiene un nombre y un valor. El nombre de una propiedad puede ser una cadena de caracteres, incluso una vacía. El valor puede ser cualquiera que podamos utilizar en JS, excepto undefined.
 
 Terminología:
-· Clase: define las características del objeto.
-· Objeto: una instancia de una clase.
-· Propiedad: un dato/característica del objeto, como el color.
-· Método: una capacidad/función del objeto, como caminar.
-· Constructor: es un método llamado en el momento de la creación de instancias.
+· Clase: Define las características del objeto.
+· Objeto: Una instancia de una clase.
+· Propiedad: Un dato/característica del objeto, como el color.
+· Método: Una capacidad/función del objeto, como caminar.
+· Constructor: Es un método llamado en el momento de la creación de instancias.
 
 El array sirve para tener muchos elementos que son del mismo tipo de dato. 
 El objeto para tener muchos elementos que se relacionan entre si porque pertenecen a una identidad pero pueden ser de diferentes tipos de datos.
-*/
 
-// comparación entre array y objeto:
-// ARRAY: en teoría un array es un objeto en donde la key que usa para guardar cada valor de los elementos es la posición. 
+Comparación entre array y objeto:
+ARRAY: En teoría un array es un objeto en donde la key que usa para guardar cada valor de los elementos es la posición. */
 const superheroe = ['Superman', 'Clark', 'Kent', 'DC'];
 console.log(superheroe);
 
-//OBJETO:
+//OBJETO: Cada valor en un objeto está asociado con una clave única.
 const superhero = {
     alias: 'Superman',
     nombre: 'Clark',
@@ -29,18 +27,16 @@ const superhero = {
     universo: 'DC'
 };
 console.log(superhero);
+// Si necesitas una colección ordenada y accesible por índices numéricos, un array es la elección adecuada.
+// Si estás manejando datos que tienen una estructura de clave-valor y el orden no es importante, un objeto es más apropiado.
+// En muchos casos, puedes usar tanto arrays como objetos, y a veces se utilizan de manera conjunta para diferentes propósitos en una aplicación.
 
-
-//! DECLARAR UN OBJETO: hay 2 formas
-/*
-1# let user = {};  // sintaxis de "objeto literal"
-2# let user = new Object(); // sintaxis de "constructor de objetos"
-*/
-
+//! DECLARAR UN OBJETO: hay 2 formas.
+/* 1. let user = {};  // sintaxis de "objeto literal"
+2. let user = new Object(); // sintaxis de "constructor de objetos" */
 
 //? LITERAL: let user = {};
 // Se declara una variable y dentro de llaves van las propiedades separadas por comas. Una propiedad tiene una clave (también conocida como “nombre” o “identificador”) antes de los dos puntos ":" y un valor a la derecha.
-
 const literalObject = { // un objeto
     firstName: "Licha",  // en la clave firstName se almacena el valor "Licha".
     "city-residence": "Corrientes", // el nombre de la clave hay que poner entre comillas cuando hay un guión(-), porque lo toma como operador(resta) y tira error.
@@ -48,12 +44,11 @@ const literalObject = { // un objeto
 };
 console.log(literalObject);
 
-
 //? FUNCIONAL: let user = new Object();  
 /* En JS la función sirve como el constructor del objeto, por lo que no hay necesidad de definir explícitamente un método constructor.
 Para crear un objeto usando una función constructora:
-1# Definir el tipo de objeto escribiendo una función constructora. Por convención va en mayúscula la letra inicial.
-2# Crear una instancia del objeto con el operador new.
+1. Definir el tipo de objeto escribiendo una función constructora. Por convención va en mayúscula la letra inicial.
+2. Crear una instancia del objeto con el operador new.
 
 Para definir un tipo de objeto, crea una función para el objeto que especifique su nombre, propiedades y métodos. Por ejemplo, supongamos que deseas crear un tipo de objeto para coches. Quieres llamar Car a este tipo de objeto, y deseas que tenga las siguientes propiedades: make, model y year. Para ello, podrías escribir la siguiente función:
 */
@@ -80,8 +75,7 @@ literalObject.favouriteColor = "Blue"; // sigue siendo el mismo objeto con propi
 console.log(literalObject);
 
 normalObject.firstName = "Vera"; 
-console.log(normalObject); 
-
+console.log(literalObject); 
 
 //! VER UNA PROPIEDAD: hay 2 formas, a través de la notación con puntos o a través de la notación con corchetes.
 // con puntos (preferida)
@@ -234,4 +228,9 @@ personaje.sayGoodBye(); // Hasta luego!
 /*
 Conclusión:
 Si bien existen diversas maneras de declarar un objeto, todas son bastante similares o poseen comportamientos muy parecidos. Cual usar va a depender del contexto donde se necesite ese objeto o de su implementación. Por ejemplo, si necesitamos crear muchos objetos con la misma estructura en tiempo de ejecución, a partir de la entrada de datos del usuario quizás un objeto de clase o funcional sea lo mejor ya que nos permite crear muchas copias con solo instanciar el objeto a través de la palabra new. Sin embargo, si nuestro caso es mucho más sencillo y solo necesitamos crear objetos casuales, que vayan a vivir poco tiempo y sin mucha complejidad entonces un objeto literal alcanzaría.
+
+
+links:
+https://es.javascript.info/object
+https://www.youtube.com/watch?v=5DaZXXbHI_U&ab_channel=deivchoi
 */
