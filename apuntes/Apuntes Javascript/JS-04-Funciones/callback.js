@@ -1,5 +1,5 @@
 //! Callback:
-// Proceso en el que una función recibe por parámetro a otra función y la ejecuta en su interior.
+// Proceso en el que una función se pasa como argumento a otra función y la ejecuta en su interior.
 // · Nos aseguran que una función no se va a ejecutar antes de que se complete una tarea, sino que se ejecutará justo después de que la tarea se haya completado.
 
 /* var devuelvoUsuario = function () {
